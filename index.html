@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency-converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="exchange.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- PART 1: HEADER -->
+    <div class="first-part">
+      <div>
+        <h1 class="heading">Currency</h1>
+        <p>Instant conversion</p>
+      </div>
+      <button><span class="dot"></span> LIVE</button>
+    </div>
+
+    <!-- PART 2: AMOUNT INPUT -->
+    <div class="second-part">
+      <p>Enter amount</p>
+      <div class="amount-input">
+        <input id="display" type="text" placeholder="0">
+        <button id="cross">✕</button>
+      </div>
+      <div class="all-button">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn" id="hun">100</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn" id="five">500</button>
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn" id="k">1000</button>
+        <button class="btn">.</button>
+        <button class="btn">0</button>
+        <button class="btn" id="clr">⌫</button>
+        <button class="btn" id="allclr">CLR</button>
+      </div>
+    </div>
+
+    <!-- PART 3: FROM / SWAP / TO -->
+    <div class="third-part">
+      <div class="from-field">
+        <p>From</p>
+        <div class="field-row">
+          <div class="currency-select">
+            <img id="fromFlag" src="in.png">
+            <select id="fromCurrency">
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+          <span id="from-amount">0</span>
+        </div>
+      </div>
+
+      <div class="swap-row">
+        <div class="line"></div>
+        <button id="swapBtn">⇅</button>
+        <div class="line"></div>
+      </div>
+
+      <div class="to-field">
+        <p>To</p>
+        <div class="field-row">
+          <div class="currency-select">
+            <img id="toFlag" src="usa.png">
+            <select id="toCurrency">
+              <option value="USD">USD</option>
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+          <span id="result">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PART 4: EXCHANGE RATE -->
+    <div class="fourth-part">
+      <h1 class="heading1">Rate Bar</h1>
+      <p>1 <span id="rateFrom">INR</span> = <span id="rateValue">0.0119</span> <span id="rateTo">USD</span></p>
+    </div>
+
+  </div>
+
+  <script src="code.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
