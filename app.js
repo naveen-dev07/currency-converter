@@ -54,7 +54,7 @@ dropdown1.addEventListener("change",getCurrency)
 dropdown.addEventListener("change", getCurrency)
 
 btn.forEach(function(button) {
-      if(button.id === "btn2") return
+         if (button.closest(".first-part")) return 
      if (button.id === "swapBtn") return 
     button.addEventListener("click", function() {
         handelInput(button.textContent)
